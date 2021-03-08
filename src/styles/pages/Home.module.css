@@ -1,0 +1,45 @@
+.container {
+    height: 100vh;
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.container section {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6.25rem;
+    align-content: center;
+}
+
+@media(max-width: 720px) {
+    .container section {
+        gap: 5rem;
+    }
+}
+
+@media(max-width: 650px) {
+    .container section {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+
+        margin-top: 2rem;
+    }
+
+    .container section > div:last-child {
+        margin-bottom: 2rem;
+    }
+}
+
+@media(max-height: 675px) {
+    .container section {
+        margin-top: 2rem;
+    }
+}
